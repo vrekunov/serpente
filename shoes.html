@@ -11,14 +11,21 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
         <div class="container">
-        <a class="navbar-brand fw-bold" href="index.html">SER<span class="text-primary">PENTE</span></a>            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <a class="navbar-brand fw-bold" href="index.html">SER<span class="text-primary">PENTE</span></a>            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item"><a class="nav-link" href="clothing.html">Одяг</a></li>
                     <li class="nav-item"><a class="nav-link active" href="shoes.html">Взуття</a></li>
                     <li class="nav-item"><a class="nav-link" href="accessories.html">Аксесуари</a></li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <button class="btn btn-outline-dark position-relative" data-bs-toggle="modal" data-bs-target="#cartModal">
+                            Кошик
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary cart-count">0</span>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -40,7 +47,12 @@
                                 <h5 class="card-title fw-bold">Спортивні кросівки "Red Speed"</h5>
                                 <p class="card-text text-muted">Легке взуття для бігу з амортизуючою підошвою. Дихаюча сітка забезпечує комфорт протягом дня.</p>
                                 <h4 class="text-primary mb-3">3 400 ₴</h4>
-                                <button class="btn btn-dark rounded-0 px-4 w-25">Купити</button>
+                                <button class="btn btn-dark rounded-0 px-4 w-25 add-to-cart-btn"
+                                        data-name='Спортивні кросівки "Red Speed"' 
+                                        data-price="3400" 
+                                        data-img="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1000&auto=format&fit=crop">
+                                    Купити
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -58,30 +70,40 @@
                                 <h5 class="card-title fw-bold">Класичні кеди "Vibe"</h5>
                                 <p class="card-text text-muted">Універсальна модель для міських прогулянок. Міцна підошва та зносостійка тканина.</p>
                                 <h4 class="text-primary mb-3">1 950 ₴</h4>
-                                <button class="btn btn-dark rounded-0 px-4 w-25">Купити</button>
+                                <button class="btn btn-dark rounded-0 px-4 w-25 add-to-cart-btn"
+                                        data-name='Класичні кеди "Vibe"' 
+                                        data-price="1950" 
+                                        data-img="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?q=80&w=1000&auto=format&fit=crop">
+                                    Купити
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-                    <div class="col-12 mb-4">
-            <div class="card shadow-sm border-0 overflow-hidden">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=1000&auto=format&fit=crop" class="img-fluid h-100 object-fit-cover" alt="Черевики">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body p-4 d-flex flex-column justify-content-center h-100">
-                            <h5 class="card-title fw-bold">Шкіряні черевики "Autumn"</h5>
-                            <p class="card-text text-muted">Класичні шкіряні черевики на шнурівці. Надійна прошивка та захист від вологи.</p>
-                            <h4 class="text-primary mb-3">4 200 ₴</h4>
-                            <button class="btn btn-dark rounded-0 px-4 w-25">Купити</button>
+            <div class="col-12 mb-4">
+                <div class="card shadow-sm border-0 overflow-hidden">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=1000&auto=format&fit=crop" class="img-fluid h-100 object-fit-cover" alt="Черевики">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body p-4 d-flex flex-column justify-content-center h-100">
+                                <h5 class="card-title fw-bold">Шкіряні черевики "Autumn"</h5>
+                                <p class="card-text text-muted">Класичні шкіряні черевики на шнурівці. Надійна прошивка та захист від вологи.</p>
+                                <h4 class="text-primary mb-3">4 200 ₴</h4>
+                                <button class="btn btn-dark rounded-0 px-4 w-25 add-to-cart-btn"
+                                        data-name='Шкіряні черевики "Autumn"' 
+                                        data-price="4200" 
+                                        data-img="https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=1000&auto=format&fit=crop">
+                                    Купити
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
             <div class="col-12 mb-4">
                 <div class="card shadow-sm border-0 overflow-hidden">
@@ -94,14 +116,19 @@
                                 <h5 class="card-title fw-bold">Замшеві лофери</h5>
                                 <p class="card-text text-muted">Вишукане взуття для офісу або вечірніх виходів. М'яка устілка для максимального комфорту.</p>
                                 <h4 class="text-primary mb-3">2 800 ₴</h4>
-                                <button class="btn btn-dark rounded-0 px-4 w-25">Купити</button>
+                                <button class="btn btn-dark rounded-0 px-4 w-25 add-to-cart-btn"
+                                        data-name='Замшеві лофери' 
+                                        data-price="2800" 
+                                        data-img="https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?q=80&w=1000&auto=format&fit=crop">
+                                    Купити
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-                        <div class="col-12 mb-4">
+            <div class="col-12 mb-4">
                 <div class="card shadow-sm border-0 overflow-hidden">
                     <div class="row g-0">
                         <div class="col-md-4">
@@ -112,15 +139,56 @@
                                 <h5 class="card-title fw-bold">Кросівки "Neon Pro"</h5>
                                 <p class="card-text text-muted">Професійна модель для тренувань у залі. Спеціальна підошва, що не ковзає.</p>
                                 <h4 class="text-primary mb-3">3 100 ₴</h4>
-                                <button class="btn btn-dark rounded-0 px-4 w-25">Купити</button>
+                                <button class="btn btn-dark rounded-0 px-4 w-25 add-to-cart-btn"
+                                        data-name='Кросівки "Neon Pro"' 
+                                        data-price="3100" 
+                                        data-img="https://images.unsplash.com/photo-1562183241-b937e95585b6?q=80&w=1000&auto=format&fit=crop">
+                                    Купити
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-                    </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-0">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-bold" id="cartModalLabel">Ваш кошик</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="cart-items"></div>
+                <div class="modal-footer border-0 d-flex justify-content-between align-items-center bg-light">
+                    <h5 class="mb-0 fw-bold">Разом: <span id="cart-total" class="text-primary">0 ₴</span></h5>
+                    <button type="button" class="btn btn-dark rounded-0 px-4" data-bs-toggle="modal" data-bs-target="#orderModal" id="checkout-btn">Оформити</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-0">
+                <div class="modal-header border-0 bg-dark text-white">
+                    <h5 class="modal-title fw-bold" id="orderModalLabel">Оформлення замовлення</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="orderForm">
+                        <div class="mb-3"><label class="form-label">Ім'я та прізвище</label><input type="text" class="form-control rounded-0" required></div>
+                        <div class="mb-3"><label class="form-label">Номер телефону</label><input type="tel" class="form-control rounded-0" placeholder="+380..." required></div>
+                        <div class="mb-3"><label class="form-label">Відділення Нової Пошти</label><input type="text" class="form-control rounded-0" required></div>
+                        <button type="submit" class="btn btn-primary w-100 rounded-0 mt-3">Підтвердити замовлення</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="cart.js"></script>
 </body>
 </html>

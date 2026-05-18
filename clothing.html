@@ -15,10 +15,16 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="clothing.html">Одяг</a></li>
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="clothing.html">Одяг</a></li>
                     <li class="nav-item"><a class="nav-link" href="shoes.html">Взуття</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="accessories.html">Аксесуари</a></li>
+                    <li class="nav-item"><a class="nav-link" href="accessories.html">Аксесуари</a></li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <button class="btn btn-outline-dark position-relative" data-bs-toggle="modal" data-bs-target="#cartModal">
+                            Кошик
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary cart-count">0</span>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -39,7 +45,12 @@
                                 <h5 class="card-title fw-bold">Бомбер "Urban Explorer"</h5>
                                 <p class="card-text text-muted">Стильна вітровка з водовідштовхувального матеріалу. Ідеально для весняних вечорів.</p>
                                 <h4 class="text-primary mb-3">2 450 ₴</h4>
-                                <button class="btn btn-dark rounded-0 px-4">Додати у кошик</button>
+                                <button class="btn btn-dark rounded-0 px-4 add-to-cart-btn" 
+                                        data-name='Бомбер "Urban Explorer"' 
+                                        data-price="2450" 
+                                        data-img="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=800&q=80">
+                                    Додати у кошик
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -58,16 +69,56 @@
                                 <h5 class="card-title fw-bold">Джинси Slim Fit Blue</h5>
                                 <p class="card-text text-muted">Класичний денім з легким ефектом потертості. Комфортна посадка.</p>
                                 <h4 class="text-primary mb-3">1 800 ₴</h4>
-                                <button class="btn btn-dark rounded-0 px-4">Додати у кошик</button>
+                                <button class="btn btn-dark rounded-0 px-4 add-to-cart-btn"
+                                        data-name='Джинси Slim Fit Blue' 
+                                        data-price="1800" 
+                                        data-img="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=800&q=80">
+                                    Додати у кошик
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
 
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-0">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-bold" id="cartModalLabel">Ваш кошик</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="cart-items"></div>
+                <div class="modal-footer border-0 d-flex justify-content-between align-items-center bg-light">
+                    <h5 class="mb-0 fw-bold">Разом: <span id="cart-total" class="text-primary">0 ₴</span></h5>
+                    <button type="button" class="btn btn-dark rounded-0 px-4" data-bs-toggle="modal" data-bs-target="#orderModal" id="checkout-btn">Оформити</button>
+                </div>
             </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-0">
+                <div class="modal-header border-0 bg-dark text-white">
+                    <h5 class="modal-title fw-bold" id="orderModalLabel">Оформлення замовлення</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="orderForm">
+                        <div class="mb-3"><label class="form-label">Ім'я та прізвище</label><input type="text" class="form-control rounded-0" required></div>
+                        <div class="mb-3"><label class="form-label">Номер телефону</label><input type="tel" class="form-control rounded-0" placeholder="+380..." required></div>
+                        <div class="mb-3"><label class="form-label">Відділення Нової Пошти</label><input type="text" class="form-control rounded-0" required></div>
+                        <button type="submit" class="btn btn-primary w-100 rounded-0 mt-3">Підтвердити замовлення</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="cart.js"></script>
 </body>
 </html>

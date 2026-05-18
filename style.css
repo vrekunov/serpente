@@ -38,13 +38,13 @@ footer a:hover {
 }
 
 .object-fit-cover {
-    height: 300px; /* Висота фото для мобілок */
+    height: 300px;
     object-fit: cover;
 }
 
 @media (min-width: 768px) {
     .object-fit-cover {
-        height: 100%; /* Повертаємо на всю висоту для десктопів */
+        height: 100%; 
     }
 }
 
